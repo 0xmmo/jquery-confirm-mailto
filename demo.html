@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Confirm Mailto</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="confirm.min.js"></script>
+	<script>
+		$(document).ready(function(){			
+			$('a.basic').confirmMailto();
+			$('a.advanced').confirmMailto({
+				message: 	'Are you cool enough to send an email to $to? ',
+				to: 		'html',
+				success: 	function(){
+								$('a.advanced').css('color','#3C3');
+							},
+				fail: 		function(){
+								$('a.advanced').css('color','#F66');
+							},
+				callback: 	function(result){
+								if(result){
+									alert('Thank you!');
+								}else{
+									alert('Boooo!');
+								}
+							}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="center">jQuery Confirm mailto:</h1>
+		<div class="center"><a href="" class="button">DOWNLOAD</a></div>
+		<br>
+		<p class="center">Confirm with users before opening any <i>mailto:</i> link through their default email client.<br>A jQuery plugin.</p>
+		<br>
+		<h2>Basic Usage</h2>
+		<h3>DEMO</h3>
+		<div class="demo">
+			Send an email to <a href="mailto: john@doe.com?subject=Hello there!" class="basic">John Doe</a>
+		</div>
+		<p>Make sure you have <a href="http://jquery.com">jQuery</a> loaded properly.</p>
+		<pre><code>&lt;script src=&quot;http//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+		<p>Include <a href="#">confirm.min.js</a> or place the plugin code at the top of your javascript file (<i>recommended</i>).</p>
+		<pre><code>!function(t){t.fn.confirmMailto=function(e){var n=t.extend({message:"Do you want to send an email to $to?",to:"href",callback:function(){},success:function(){},fail:function(){}},e),a=/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi,i=function(e){var i=n.message,c=n.to;if(c="href"==c?t(this).attr("href").match(a):"html"==c?t(this).html():c,i=i.replace("$to",c)==i?i+c:i.replace("$to",c),confirm(i)){n.success();var o=!0}else{e.preventDefault(),n.fail();var o=!1}return setTimeout(function(){n.callback(o)},1),o};return this.filter('[href^="mailto:"]').each(function(){t(this).bind("click",i)}),this}}(jQuery);</code></pre>
+		<p>Call the method on document load.</p>
+		<pre><code>$(document).ready(function(){
+	$('a').confirmMailto();
+});</code></pre>
+		<p>That's it.</p>
+		<br>
+		<br>
+		<h2>Advanced Usage</h2>
+		<h3>DEMO</h3>
+		<div class="demo">
+			Shoot an email to <a href="mailto: advanced@user.io" class="advanced">Advanced User</a>
+		</div>
+		<p>You can alternately call the method with the following options.</p>
+		<pre><code>$('a.advanced').confirmMailto({
+	message: 	'Are you cool enough to send an email to $to? ',
+	to: 		'html', // href/html
+	success:	function(){
+				$('a.advanced').css('color','#3C3');
+			},
+	fail:		function(){
+				$('a.advanced').css('color','#F66');
+			},
+	callback:	function(result){
+				if(result){
+					alert('Thank you!');
+				}else{
+					alert('Boooo!');
+				}
+			}
+});</code></pre>
+	</div>
+	<footer>
+		<a href="http://github.com">Github</a> | Made by <a href="http://mmoustafa.com">Mohamed Moustafa</a>
+	</footer>
+	<br>
+	<br>
+</body>
+</html>
