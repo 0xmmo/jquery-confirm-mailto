@@ -247,10 +247,11 @@
 	},
 	"file_history":
 	[
-		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/demo.html",
-		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/confirm.min.js",
-		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/style.css",
 		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/confirm.js",
+		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/confirm.min.js",
+		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/demo.html",
+		"/C/node/start/test.js",
+		"/C/Users/mmoustafa/Documents/GitHub/jQuery-Confirm-Mailto/style.css",
 		"/C/wamp/www/centtr/alpha/css/global.css",
 		"/C/wamp/www/centtr/docs/motive.txt",
 		"/C/wamp/www/centtr/alpha/js/global.js",
@@ -373,8 +374,7 @@
 		"/E/Personal Website/js/global.js",
 		"/E/Personal Website/index.html",
 		"/E/Personal Website/js/chart.js",
-		"/C/Users/mmoustafa/Desktop/Chart.min.js",
-		"/C/Users/mmoustafa/Downloads/main.cpp"
+		"/C/Users/mmoustafa/Desktop/Chart.min.js"
 	],
 	"find":
 	{
