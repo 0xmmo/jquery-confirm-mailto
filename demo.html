@@ -2,6 +2,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>jQuery Confirm Mailto</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A jQuery plugin to confirm before opening any mailto links through user's browser.">
+	<meta name="keywords" content="mailto, confirm, javascript, link, anchor, jquery, dialog, mail to">
 	<link rel="stylesheet" href="style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="confirm.min.js"></script>
@@ -42,7 +45,7 @@
 		</div>
 		<p>Make sure you have <a href="http://jquery.com">jQuery</a> loaded properly.</p>
 		<pre><code>&lt;script src=&quot;http//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-		<p>Include <a href="#">confirm.min.js</a> or place the plugin code at the top of your javascript file (<i>recommended</i>).</p>
+		<p>Include <a href="https://raw.githubusercontent.com/mmoustafa/jQuery-Confirm-Mailto/master/confirm.min.js">confirm.min.js</a> or place the plugin code at the top of your javascript file (<i>recommended</i>).</p>
 		<pre><code>!function(t){t.fn.confirmMailto=function(e){var n=t.extend({message:"Do you want to send an email to $to?",to:"href",callback:function(){},success:function(){},fail:function(){}},e),a=/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi,i=function(e){var i=n.message,c=n.to;if(c="href"==c?t(this).attr("href").match(a):"html"==c?t(this).html():c,i=i.replace("$to",c)==i?i+c:i.replace("$to",c),confirm(i)){n.success();var o=!0}else{e.preventDefault(),n.fail();var o=!1}return setTimeout(function(){n.callback(o)},1),o};return this.filter('[href^="mailto:"]').each(function(){t(this).bind("click",i)}),this}}(jQuery);</code></pre>
 		<p>Call the method on document load.</p>
 		<pre><code>$(document).ready(function(){
@@ -76,7 +79,7 @@
 });</code></pre>
 	</div>
 	<footer>
-		<a href="http://github.com">Github</a> | Made by <a href="http://mmoustafa.com">Mohamed Moustafa</a>
+		<a href="https://github.com/mmoustafa/jQuery-Confirm-Mailto">Github</a> | Made by <a href="http://mmoustafa.com">Mohamed Moustafa</a>
 	</footer>
 	<br>
 	<br>
