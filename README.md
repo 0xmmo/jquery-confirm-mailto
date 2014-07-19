@@ -3,4 +3,4 @@ jQuery Confirm mailto
 
 Confirm with users before opening any mailto link on the page through their default email client.
 
-*Demo:* [http://mmoustafa.com/experiments/mailto/](http://mmoustafa.com/experiments/mailto/)
+**Demo:** [http://mmoustafa.com/experiments/mailto/](http://mmoustafa.com/experiments/mailto/)
