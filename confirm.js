@@ -16,7 +16,7 @@
         	var message = settings.message;
         	var to = settings.to;
 
-	    	to = (to=='href') ? $(this).attr('href').match(rgx) : (to=='html') ? $(this).html() : to ; // PS: Strip Tags
+	    	to = (to=='href') ? $(this).attr('href').match(rgx) : (to=='html') ? $(this).text() : to ;
 			message = (message.replace('$to',to)==message) ? (message+to) : message.replace('$to',to) ;
 
 			if(confirm(message)){
