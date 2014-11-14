@@ -5,4 +5,4 @@ Confirm with users before opening any mailto link on the page through their defa
 
 [Demo & Usage](http://mmoustafa.com/experiments/mailto/)
 
-[Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/confirm-mailto/)
+[Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/confirm-mailto/) (Adapted by [Jitendra Joshi](https://github.com/joshijitendra))
